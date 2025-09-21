@@ -8,13 +8,19 @@ import SplashCursor from "../components/SplashCursor";
 import MagicBento from "../components/MagicBento";
 import ScrollFloat from "../components/ScrollFloat";
 
-// ✅ Import CardNav and logo
-import CardNav from "../components/CardNav";
-import logo from "../components/logo.svg";
+import Carousel from '../components/Carousel';
+
+
+
 
 const handleAnimationComplete = () => {
   console.log("Animation completed!");
 };
+
+
+
+
+
 
 export default function LandingPage() {
   return (
@@ -50,10 +56,11 @@ export default function LandingPage() {
       {/* Hero Section */}
       <section className="relative z-10">
         <SplashCursor />
-
-        {/* Hero Content */}
-        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 pb-16 pt-12 sm:px-6 md:grid-cols-2 md:gap-16 md:pb-20 md:pt-20">
-          <div className="space-y-8 text-white">
+        
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-12 px-4 pb-16 pt-12 sm:px-6 md:flex-row md:gap-16 md:pb-20 md:pt-20">
+          
+          {/* Text Content */}
+          <div className="space-y-8 text-white md:w-1/2">
             <div className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium shadow-sm">
               <Sparkles className="h-4 w-4 animate-pulse" />
               <span>AI-powered career pathways</span>
@@ -66,17 +73,16 @@ export default function LandingPage() {
                 animateBy="words"
                 direction="top"
                 onAnimationComplete={handleAnimationComplete}
-                className="text-7xl mb-8"
+                className="mb-8 text-7xl"
               />
               <span className="bg-gradient-to-r from-[#4E2BF5] to-[#5E3FF7] bg-clip-text text-transparent">
                 INTELLIGENT Learning
               </span>
             </h1>
 
-            <p className="text-slate-300 text-lg leading-relaxed sm:text-xl max-w-2xl">
-              Discover personalized pathways, master in-demand skills, and
-              accelerate your career growth with AI-driven insights and
-              industry-aligned training.
+            <p className="max-w-2xl text-lg leading-relaxed text-slate-300 sm:text-xl">
+              Discover personalized pathways, master in-demand skills, and accelerate
+              your career growth with AI-driven insights and industry-aligned training.
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row">
@@ -99,6 +105,8 @@ export default function LandingPage() {
               </a>
             </div>
           </div>
+           {/* Carousel Container - Right Side */}
+          
         </div>
       </section>
 
